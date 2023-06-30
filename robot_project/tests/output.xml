@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.0 on win32)" generated="20230630 15:54:21.214" rpa="false" schemaversion="4">
+<suite id="s1" name="Test" source="C:\Users\Anastasiya_Viktarovi\Desktop\robot_deploy_test\robot_deploy_test\robot_project\tests\test.robot">
+<test id="s1-t1" name="Verify the count of records in [Person].[Address] table" line="9">
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${test}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20230630 15:54:21.245" level="INFO">${test} = tst</msg>
+<status status="PASS" starttime="20230630 15:54:21.245" endtime="20230630 15:54:21.245"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${result}</var>
+<arg>${test}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230630 15:54:21.246" level="INFO">${result} = tst</msg>
+<status status="PASS" starttime="20230630 15:54:21.246" endtime="20230630 15:54:21.246"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>"Num value is ${result}"</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230630 15:54:21.247" level="INFO">"Num value is tst"</msg>
+<status status="PASS" starttime="20230630 15:54:21.247" endtime="20230630 15:54:21.247"/>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<msg timestamp="20230630 15:54:21.247" level="INFO">Length is 3</msg>
+<status status="PASS" starttime="20230630 15:54:21.247" endtime="20230630 15:54:21.247"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${expected}</arg>
+<arg>${result}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230630 15:54:21.247" endtime="20230630 15:54:21.248"/>
+</kw>
+<doc>| *Setup*:
+| 0.Connect To Database AdventureWorks2012 via pymsql
+|
+| *Test Steps*
+| 0.Query row count for Table Person.Address
+|
+| *Expected result:*
+| 0.Result is not empty
+| 1.The value with the total number of records in the [Person].[Address] table is the same as expected</doc>
+<tag>Table Person.Address</tag>
+<status status="PASS" starttime="20230630 15:54:21.244" endtime="20230630 15:54:21.248"/>
+</test>
+<doc>Contains Test Cases from file TestCasesRF.xlsx</doc>
+<status status="PASS" starttime="20230630 15:54:21.215" endtime="20230630 15:54:21.249"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Table Person.Address</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
